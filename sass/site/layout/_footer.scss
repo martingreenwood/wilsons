@@ -1,0 +1,125 @@
+#colophon {
+	background-color: $light-gray;
+	float: left;
+	width: 100%;
+
+	ul {
+		list-style: none;
+
+		li {
+			display: inline-block;
+		}
+	}
+	
+	.site-info {
+		@include row;
+		@include rem(padding, 21px 0);
+
+		.contact-details {
+			@include span-columns(12);
+			@include rem(padding-top, 25px);
+
+			@include media ($medium-screen-up) {
+				@include span-columns(3);
+			}
+	
+			p {
+				line-height: 1.5;
+				@include rem(font-size, 13px);
+			}
+
+		}
+
+		.footer-menus {
+			@include span-columns(12);
+
+			@include media ($medium-screen-up) {
+				@include span-columns(6);
+			}
+		}
+
+		#footer-navigation {
+			width:100%;
+			float: right;
+
+			.menu-main-menu-container {
+				float: right;
+
+				#top-footer-menu {
+					@include rem(margin-top, 8px);
+
+					li {
+						@include rem(margin, 13px 0 25px 15px);
+			    		text-transform: uppercase;
+			    		font-weight: 700;
+
+			    		&:last-child {
+			    			@include rem(margin-right, 0);
+			    		}
+
+			    		&:active, &:hover, &:focus {
+			    			color: $medium-gray;
+			    			@include rem(border-bottom, 2px solid $medium-gray);
+			    			@include rem(padding-bottom, 2px);
+
+			    			a {
+			    				color: $medium-gray;
+			    			}
+						}
+					}
+				}
+			}
+		}
+
+		#social {
+			width: 100%;
+			float: right;
+
+			ul {
+				float: right;
+				list-style: none;
+				@include rem(margin-bottom, 34px);
+				@include rem(margin-top, 8px);
+
+				li {
+					display: inline-block;
+		    		@include rem(padding, 1px);
+		    		@include rem(padding-left, 3px);
+
+		    		a {
+				    	@include rem(width, 26px);
+				    	display: block;
+	    				text-align: center;
+		    			border: 2.5px solid $dark-gray;
+	    				border-radius: 50%;
+
+	    				.fa {
+	    					color: $dark-gray;
+	    				}
+		    		}
+				}
+			}
+		}
+
+		#footer-bottom-navigation {
+			width: 100%;
+			float: right;
+			@include rem(font-size, 13px);
+
+			p {
+				float: right;
+				@include rem(font-size, 13px);
+			}
+
+			.menu-secondary-menu-container {
+				float: right;
+
+				li {
+					@include rem(margin-left, 15px);
+		    		//@include rem(font-size, 15px);
+				}
+			}
+		}
+
+	}
+}

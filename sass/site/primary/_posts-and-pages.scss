@@ -1,0 +1,548 @@
+/*==============================
+=            GLOBAL            =
+==============================*/
+
+#feature_img {
+    height: 380px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .container, .row {
+    	height: 100%;
+    	//min-height: 380px;
+    }
+
+    h1 {
+    	max-width: 440px;
+    }
+
+}
+
+.bleed-left {
+	position: absolute;
+	left: 0;
+}
+
+.bleed-right {
+	position: absolute;
+	right: 0;
+}
+
+/*==============================
+=            HOME             =
+==============================*/
+
+.home {
+
+	.entry-content {
+		text-align: center;
+		@include rem(padding, 50px 0);
+		margin-top: 0;		
+	}
+
+	#featured-video {
+		width: 100%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	#section_one {
+		position: relative;
+		float: left;
+		width: 100%;
+
+		.secondary-text {
+			float: left;
+			width: 33.333%;
+			@include rem(padding-right, 48px);
+			@include rem(padding-top, 50px);
+
+			a {
+				text-transform: uppercase;
+			}
+		}
+
+		.secondary-images {
+			float: left;
+			width: 66.666%;
+
+			.img {
+				float: left;
+				width: 50%;
+
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	#section_two {
+		position: relative;
+		float: left;
+		width: 100%;
+
+		.tertiary-img {
+			float: left;
+			width: 66.666%;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.tertiary-text {
+			float: left;
+			width: 33.333%;
+		}
+	}
+}
+
+/*==============================
+=         OUR VEHICLES         =
+==============================*/
+
+.entry-content {
+
+	.results {
+		@include row;
+		width: 100%;
+		max-width: 1100px;
+		@include rem(margin-top, 50px);
+		margin-left: auto;
+		margin-right: auto;
+
+		.vehicle {
+			@include span-columns(12);
+			@include omega(2n);
+			max-width: 513px;
+			@include rem(margin-bottom, 55px);
+
+			@include media ($medium-screen-up) {
+				@include span-columns(4.5);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(6);
+			}
+
+			img {
+				@include rem(margin-bottom, 21px);
+			}
+
+			.entry-title {
+				line-height: 0;
+				.price {
+					color: $brand-secondary;
+					font-weight: 600;
+					@include rem(font-size, 22px);
+					@include rem(margin-bottom, 25px);
+				}
+			}
+
+			.entry-content {
+				@include rem(margin-top, 20px);
+			}
+
+			a {
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.pagination {
+		background-color: $light-gray;
+		min-height: 60px;
+		.prev-next-posts {
+				@include rem(padding, 25px 0);
+
+				.prev-posts-link {
+					max-width: 50%;
+					display: inline;
+
+					img {
+						display: inline-block;
+						@include rem(margin-right, 8px);
+					}
+
+					a {
+						text-transform: uppercase;
+			    		font-weight: 700;
+					}
+				}
+
+				.next-posts-link {
+					float: right;
+				}
+		}
+	}
+}
+
+.cta {
+		background-color: $brand-secondary;
+		text-align: center;
+		min-height: 300px;
+
+		.cta-text {
+			@include rem(padding-top, 61px);
+			@include rem(padding-bottom, 24px);
+
+			h1 {
+				@include rem(font-size, 42px);
+			}
+
+			p, a {
+				color: $background-color;
+				@include rem(margin-bottom, 50px);
+
+				a {
+					text-transform: uppercase;
+
+					img {
+						display: inline-block;
+						@include rem(margin-right, 15px);
+					}
+				}
+			}
+		}
+}
+
+/*==============================
+=          SINGLE CAR          =
+==============================*/
+
+.pagination-top {
+	background-color: $light-gray;
+	@include rem(padding, 15px 38px);
+}
+
+.entry-content {
+
+	.vehicle-intro {
+
+		.description {
+			@include span-columns(12);
+
+			hr {
+				max-width: 40px;
+				@include rem(margin-bottom, 20px);
+			}
+
+			@include media ($medium-screen-up) {
+				@include span-columns(6);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(8);
+			}
+		}
+
+		.spec {
+			@include span-columns(12);
+
+			hr {
+				max-width: 40px;
+				@include rem(margin-bottom, 20px);
+			}
+
+			@include media ($medium-screen-up) {
+				@include span-columns(3);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(4);
+			}
+
+			h2 {
+				span {
+					color: $brand-secondary;
+				}
+			}
+
+			dl {
+				dt, dd {
+    				float: left;
+    				width: 50%;
+    				margin: 0;
+				}
+			}
+		}
+	}
+}
+
+	.car-details {
+		//float: left;
+		width: 100%;
+
+		#left-section {
+			position: relative;
+			float: left;
+			width: 66.66%;
+
+			.gallery {
+				float: left;
+				width: 100%;
+				margin-bottom: 0;
+
+				img {
+					width: 100%;
+				}	
+			}
+
+			.secondary-images {
+				float: left;
+				width: 100%;
+
+				.enquiry {
+					float: left;
+					width: 50%;
+					height: 100%;
+					background-color: $brand-secondary;	
+
+					ul {
+						list-style: none;
+						text-align: center;
+
+						li {
+							a {
+								text-transform: uppercase;
+								color: #fff;
+
+								.fa {
+									@include rem(font-size, 35px);
+									@include rem(padding-right, 15px);
+									@include rem(margin-bottom, 10px);
+								}
+							}
+						}
+					}
+				}
+
+				.secondary-img {
+					float: left;
+					width: 50%;
+
+					img {
+					width: 100%;
+					}
+				}
+			}
+		}
+
+		#right-section {
+			position: relative;
+			float: right;
+			width: 33.33%;
+
+			.tertiary-img {
+				width: 100%;
+
+				img {
+					width: 100%;
+				}
+			}
+
+			.vehicle-details {
+				width: 100%;
+				@include rem(padding, 20px 38px);
+
+				dl {
+					dt, dd {
+	    				float: left;
+	    				width: 50%;
+	    				margin: 0;
+					}
+				}
+
+				a {
+					text-transform: uppercase;
+
+					img {
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
+
+/*==============================
+=        WHAT WE OFFER        =
+==============================*/
+
+.entry-content {
+
+	@include rem(margin-top, 50px);
+
+	.intro-text {
+		@include row;
+		width: 100%;
+		text-align: center;
+
+		@include media ($medium-screen-up) {
+			width: 100%;
+			max-width: 870px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		hr {
+			width: 40px;
+			@include rem(margin, 15px auto);
+		}
+
+		p {
+			@include rem(font-size, 15px);
+		}
+	}
+
+	.columns {
+		@include row;
+		width: 100%;
+		max-width: 880px;
+		@include rem(margin-top, 50px);
+		margin-left: auto;
+		margin-right: auto;
+
+		.column {
+			@include span-columns(12);
+
+			@include media ($medium-screen-up) {
+				@include span-columns(4.5);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(6);
+			}
+
+			p {
+				color: $text-color;
+			}
+		}
+	}
+
+	.trio {
+		@include row;
+		width: 100%;
+		@include rem(margin-top, 50px);
+		@include rem(padding, 50px);
+		background-color: $brand-secondary;
+
+
+		.column {
+
+			@include span-columns(12);
+			max-width: 281px;
+
+			@include media ($medium-screen-up) {
+				@include span-columns(3);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(4);
+				@include rem(margin-right, 158px);
+			}
+
+			h2, p, {
+				color: $background-color;
+
+			}
+
+			h2 {
+				max-width: 235px;
+			}
+
+			hr {
+				background-color: $background-color;
+			}
+		}
+	}
+}
+
+/*==============================
+=             BLOG             =
+==============================*/
+
+.site-content {
+
+	.post {
+
+		.container {
+			@include rem(margin-top, 50px);
+			@include rem(margin-bottom, 50px);
+
+			.entry-content {
+				float: left;
+				width: 50%;
+			}
+
+			.entry-image, .read-more {
+				float: left;
+				width: 23%;
+				@include rem(margin-top, 50px);
+
+				img {
+					width: 100%;
+				}
+			}
+
+			.entry-content, .entry-image {
+				@include rem(margin-right, 20px);
+			}
+		}
+	}
+}
+
+/*==============================
+=        BLOG - SINGLE        =
+==============================*/
+
+.single-post {
+	.hentry {
+		@include rem(padding, 50px 0);
+	}
+}
+
+/*==============================
+=           CONTACT           =
+==============================*/
+
+#gform_wrapper_1 {
+	margin: 0;
+	@include rem(padding-bottom, 25px);
+
+	.gfield_label {
+		@include rem(font-size, 14px);
+	}
+
+	.ginput_complex {
+		span {
+			label {
+				display: none;
+			}
+		}
+	}
+
+	li#field_1_2, li#field_1_3 {
+	    width: 50%;
+	    float: left;
+	    clear: none;
+
+	    input {
+	    	width: 94%;
+	    }
+
+	}
+
+	.gform_footer {
+		.gform_button {
+			color: $brand-primary;
+
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+}

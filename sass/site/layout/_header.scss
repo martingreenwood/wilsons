@@ -1,0 +1,99 @@
+#masthead {
+	@include row;
+	 @include rem(padding-bottom, 23px);
+
+	@include media ($large-screen-up) {
+		@include rem(padding-bottom, 29px);	
+	}
+
+	.site-branding {
+		
+		top: 0;
+	    position: absolute;
+	    background: $brand-primary;
+	    @include rem(padding, 20px 20px);
+	}
+
+	.main-navigation {
+	    float: left;
+	  	@include rem(padding-top, 46px);
+
+	    	@include media ($large-screen-up) {
+				@include span-columns(7);
+				@include shift(3);
+				margin-right: 0;
+			}
+
+	    #primary-menu {
+
+	    	li {
+	    		@include rem(margin, 0 8px);
+	    		text-transform: uppercase;
+	    		@include rem(font-size, 15px);
+	    		font-weight: 700;
+
+	    		&:active, &:hover, &:focus {
+	    			color: $medium-gray;
+	    			@include rem(border-bottom, 2px solid $medium-gray);
+	    			@include rem(padding-bottom, 2px);
+
+	    			a {
+	    				color: $medium-gray;
+	    			}
+	    		}
+	    	}
+	    }
+	}
+
+	#social {
+		float: right;
+		@include rem(padding-top, 23px);
+
+		ul {
+			list-style: none;
+			@include rem(margin-bottom, 4px);
+
+			li {
+				display: inline-block;
+	    		@include rem(padding, 1px);
+	    		@include rem(padding-left, 3px);
+
+	    		a {
+			    	@include rem(width, 26px);
+			    	display: block;
+    				text-align: center;
+	    			border: 2.5px solid $dark-gray;
+    				border-radius: 50%;
+
+    				.fa {
+    					color: $dark-gray;
+    				}
+	    		}
+			}
+		}
+
+		p {
+			text-align: right;
+			text-transform: uppercase;
+			color: $dark-gray;
+			@include rem(font-size, 12px);
+		}
+	}
+
+	#phone {
+		background-color: $brand-primary;
+	    position: absolute;
+		right: 0;
+		top: 86px;
+		@include rem(padding, 5px 52px);
+		//@include rem(margin-top, -21px);
+
+		p {
+			color: $background-color;
+			font-weight: 700;
+			text-transform: uppercase;
+			@include rem(margin-bottom, 0);
+			@include rem(font-size, 14px);
+		}
+	}
+}

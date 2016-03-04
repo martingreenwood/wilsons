@@ -1,0 +1,1 @@
+$j=jQuery,$j(function(){$j(".left-column .column").matchHeight(),$j(".right-column .column").matchHeight(),$j("#left-section .column").matchHeight()});
