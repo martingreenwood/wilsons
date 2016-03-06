@@ -10,64 +10,53 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		
-	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+		<?php 
+		$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1; 
+		$args = array( 'post_type' => 'cars', 'posts_per_page' => 6, 'paged' => $paged);
+		$loop = new WP_Query( $args );
+		?>
+
+		<?php require get_stylesheet_directory() . '/inc/pagination.php'; ?>
 		
 		<div class="results">
-			<?php $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1; 
-				$args = array( 'post_type' => 'cars', 'posts_per_page' => 6, 'paged' => $paged);
-				$loop = new WP_Query( $args );
-				while ( $loop->have_posts() ) : $loop->the_post();
-				  echo '<div class="vehicle">';
-						  the_post_thumbnail();
-						  echo '<div class="entry-title">';
-							  the_title('<h2>','</h2>');
-							 echo '<div class="price">';
-							  	echo 'Price £'; the_field('price');
-							 echo '</div>';
-							echo '<hr>';
-						  echo '</div>';
-						  echo '<div class="entry-content">';
-						  	the_content();
-						  echo '</div>';
-						  echo '<a href="';
-						  	the_permalink();
-						  echo '">View Details</a>';
-				  echo '</div>';
-				endwhile; ?>
-		</div>
-		<div class="pagination">
-			<?php if ($loop->max_num_pages > 1) { // check if the max number of pages is greater than 1  ?>
-					<nav class="prev-next-posts container">
-					<div class="prev-posts-link">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/arrow-left.png" width="21" height="20">
-  					<?php echo get_next_posts_link( 'Previous', $loop->max_num_pages); // display older posts link ?>
+			<div class="container">
+			<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+				  
+				<div class="vehicle">
+					<?php the_post_thumbnail(); ?>
+					<div class="entry-title">
+						<?php the_title('<h2>','</h2>'); ?>
+						<h3 class="price">Price <span>£<?php the_field('price'); ?></span></h3>
+						<hr>
 					</div>
-					<div class="next-posts-link">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/arrow-right.png" width="21" height="20">
-  					<?php echo get_previous_posts_link( 'Next' ); // display newer posts link ?>
+					<div class="entry-content">
+						<?php the_content(); ?>
+						<a class="more" href="<?php the_permalink(); ?>">View Details</a>
 					</div>
-					</nav>
-			<?php } ?>
+				</div>
+
+			<?php endwhile; ?>
+			</div>
 		</div>
 
-			<?php wp_reset_query(); ?>
+		<?php require get_stylesheet_directory() . '/inc/pagination.php'; ?>
+
+		<?php wp_reset_query(); wp_reset_postdata(); ?>
 
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
 
-	<div class="cta">
-		<div class="cta-text">
-			<h1>can't find what you're looking for?</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-			<p><a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/arrow-white.png" width="21" height="20">make an enquiry</a></p>
+<?php //if (get_field('enable_prefooter_cta')): ?>
+<div class="cta">
+	<div class="table">
+		<div class="cell middle center cta-text">
+			<h3><?php the_field('cta_title', 'option'); ?></h3>
+			<p><?php the_field('cta_text', 'option'); ?></p>
+			<a class="more" href="<?php the_field('cta_link', 'option'); ?>"><?php the_field('cta_link_text', 'option'); ?></a>
 		</div>
 	</div>
-
+</div>
+<?php //endif; ?>

@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-	<?php get_template_part( 'template-parts/feature', 'image' ); ?>
+	<?php get_template_part( 'template-parts/feature', 'slider' ); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">

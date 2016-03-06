@@ -1,29 +1,29 @@
 #masthead {
 	@include row;
-	 @include rem(padding-bottom, 23px);
 
-	@include media ($large-screen-up) {
-		@include rem(padding-bottom, 29px);	
+	.container {
+		position: relative;
 	}
 
 	.site-branding {
-		
 		top: 0;
 	    position: absolute;
 	    background: $brand-primary;
 	    @include rem(padding, 20px 20px);
 	}
 
+	.contact-info {
+		@include rem(padding-top, 20px);
+	}
+
 	.main-navigation {
-	    float: left;
-	  	@include rem(padding-top, 46px);
-
-	    	@include media ($large-screen-up) {
-				@include span-columns(7);
-				@include shift(3);
-				margin-right: 0;
-			}
-
+		display: block;
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		margin-top: -12px;
+		text-align: center;	
+	    
 	    #primary-menu {
 
 	    	li {
@@ -31,14 +31,33 @@
 	    		text-transform: uppercase;
 	    		@include rem(font-size, 15px);
 	    		font-weight: 700;
+    		    display: inline-block;
+    			float: none;
+
+    			a {
+					&:after {
+						content: "";
+						opacity: 0;
+						height: 2px;
+						position: absolute;
+						background-color: $medium-gray;
+						width: 100%;
+						left: 0;
+						bottom: -3px;
+					}
+
+    			}
 
 	    		&:active, &:hover, &:focus {
+	    			
 	    			color: $medium-gray;
-	    			@include rem(border-bottom, 2px solid $medium-gray);
-	    			@include rem(padding-bottom, 2px);
 
 	    			a {
 	    				color: $medium-gray;
+
+	    				&:after {
+	    					opacity: 1;
+	    				}
 	    			}
 	    		}
 	    	}
@@ -47,7 +66,8 @@
 
 	#social {
 		float: right;
-		@include rem(padding-top, 23px);
+		clear: both;
+		//@include rem(padding-top, 23px);
 
 		ul {
 			list-style: none;
@@ -82,11 +102,11 @@
 
 	#phone {
 		background-color: $brand-primary;
-	    position: absolute;
-		right: 0;
-		top: 86px;
-		@include rem(padding, 5px 52px);
-		//@include rem(margin-top, -21px);
+	    float: right;
+	    clear: both;
+	    @include rem(padding, 5px 20px);
+		//right: 0;
+		//top: 86px;
 
 		p {
 			color: $background-color;

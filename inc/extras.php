@@ -33,3 +33,48 @@ add_filter( 'body_class', 'wilsons_body_classes' );
 if( function_exists('acf_add_options_page')) {
 	acf_add_options_page();
 }
+
+/**
+ * Post thumbnail caption
+ *
+ */
+function the_post_thumbnail_caption() {
+	global $post;
+
+	$thumbnail_id    = get_post_thumbnail_id($post->ID);
+	$thumbnail_image = get_posts(array('p' => $thumbnail_id, 'post_type' => 'attachment'));
+
+	if ($thumbnail_image && isset($thumbnail_image[0])) {
+		echo $thumbnail_image[0]->post_excerpt;
+	}
+}
+
+/**
+ * Post thumbnail description
+ *
+ */
+function the_post_thumbnail_description() {
+	global $post;
+
+	$thumbnail_id    = get_post_thumbnail_id($post->ID);
+	$thumbnail_image = get_posts(array('p' => $thumbnail_id, 'post_type' => 'attachment'));
+
+	if ($thumbnail_image && isset($thumbnail_image[0])) {
+		echo $thumbnail_image[0]->post_content;
+	}
+}
+
+/**
+ * Post thumbnail title
+ *
+ */
+function the_post_thumbnail_title() {
+	global $post;
+
+	$thumbnail_id    = get_post_thumbnail_id($post->ID);
+	$thumbnail_image = get_posts(array('p' => $thumbnail_id, 'post_type' => 'attachment'));
+
+	if ($thumbnail_image && isset($thumbnail_image[0])) {
+		echo $thumbnail_image[0]->post_title;
+	}
+}

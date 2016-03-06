@@ -16,6 +16,12 @@ dfn, cite, em, i {
 	font-style: italic;
 }
 
+a {
+	&:after {
+		transition: all $base-duration $base-timing;
+	}
+}
+
 blockquote {
 	@include rem(margin, 0 15px);
 }

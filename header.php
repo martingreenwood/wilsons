@@ -42,7 +42,8 @@
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 
-				<aside id="social">
+				<div class="contact-info">
+					<aside id="social">
 						<ul>
 							<li><a href="<?php the_field('facebook', 'option'); ?>"><i class="fa fa-facebook"></i></a></li>
 							<li><a href="<?php the_field('instagram', 'option'); ?>"><i class="fa fa-instagram"></i></a></li>
@@ -50,10 +51,11 @@
 							<li><a href="<?php the_field('google', 'option'); ?>"><i class="fa fa-google"></i></a></li>
 						</ul>
 						<p><?php the_field('hashtag', 'options'); ?></p>
-				</aside>
+					</aside>
 
-				<div id="phone">
+					<div id="phone">
 						<p>Call today on <?php the_field('phone', 'options'); ?></p>
+					</div>
 				</div>
 
 			</div>
