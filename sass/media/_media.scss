@@ -14,12 +14,41 @@ object {
 	max-width: 100%;
 }
 
-/*--------------------------------------------------------------
-## Captions
---------------------------------------------------------------*/
+// Captions
 @import "captions";
 
-/*--------------------------------------------------------------
-## Galleries
---------------------------------------------------------------*/
+// Galleries
 @import "galleries";
+
+// SLICK
+.slick-arrow {
+    position: absolute;
+	width: 23px;
+	height: 41px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	top: 50%;
+	margin-top: -20.5px;
+	outline: 0;
+	box-shadow: none;
+	border: 0;
+	text-indent: -9999px;
+	z-index: 50;
+
+	&:hover, &:focus, &:active {
+		background-color: transparent;
+		outline: 0;
+		box-shadow: none;
+		border: 0;
+	}
+}
+
+.slick-next {
+	background-image: url(assets/slide-next.svg);
+	right: 20px;
+}
+.slick-prev {
+	background-image: url(assets/slide-prev.svg);
+	left: 20px;
+}

@@ -1,0 +1,40 @@
+{
+    "key": "group_56d96a067dab5",
+    "title": "Feature Video URL",
+    "fields": [
+        {
+            "key": "field_56d96a0f86c3f",
+            "label": "",
+            "name": "feature_vid_url",
+            "type": "url",
+            "instructions": "Please put the URL to your video here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 30,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1457364417
+}

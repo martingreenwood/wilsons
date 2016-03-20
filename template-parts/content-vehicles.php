@@ -25,7 +25,7 @@
 			<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 				  
 				<div class="vehicle">
-					<?php the_post_thumbnail(); ?>
+					<?php the_post_thumbnail('news'); ?>
 					<div class="entry-title">
 						<?php the_title('<h2>','</h2>'); ?>
 						<h3 class="price">Price <span>£<?php the_field('price'); ?></span></h3>

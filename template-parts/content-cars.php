@@ -25,11 +25,12 @@
 				<h2>Price  <span>£<?php the_field('price'); ?></span></h2>
 				<hr>
 				<dl>
-					<dt>Paint Colour</dt><dd><?php the_field('paint_colour'); ?></dd>
-					<dt>Main Hide Colour</dt><dd><?php the_field('main_hide_colour'); ?></dd>
-					<dt>Veneer</dt><dd><?php the_field('veneer'); ?></dd>
-					<dt>Registration Date</dt><dd><?php the_field('registration_date'); ?></dd>
-					<dt>Mileage</dt><dd><?php the_field('mileage'); ?></dd>
+					<?php 
+					$vehicle_spec = get_field('vehicle_spec'); 
+					$first_five_spec = array_slice($vehicle_spec, 0, 5, true);
+					foreach ($first_five_spec as $first_five_item): ?>
+					<dt><?php echo $first_five_item['feature']; ?></dt><dd><?php echo $first_five_item['value']; ?></dd>
+					<?php endforeach; ?>
 				</dl>
 			</div>
 		</div>
@@ -38,52 +39,60 @@
 
 <div class="car-details">
 
-	<section id="left-section">
-			
-			<div class="gallery">
-				<img src="http://placehold.it/780x780">
-			</div>
-			
-			<div class="secondary-images">
+	<div class="row">
+
+		<section id="left-section" class="bleed-left">
 				
-				<div class="enquiry column table">
-					<div class="cell middle">
-						<ul>
-							<li><a class="download icon" href="#">vehicle spec (pdf)</a></li>
-							<li><a class="email icon" href="#">email to friend</a></li>
-							<li><a class="enquire icon" href="#">make enquiry</a></li>
-						</ul>
+				<div class="gallery">
+					<div class="slick">
+
+						<?php $vehicle_gallery = get_field('vehicle_gallery'); if ($vehicle_gallery): ?>
+						<?php foreach( $vehicle_gallery as $image ): ?>
+
+						<div>
+							<img src="<?php echo $image['sizes']['gallery']; ?>" alt="<?php echo $image['alt']; ?>" />
+						</div>
+
+						<?php endforeach; endif; ?>
+
 					</div>
 				</div>
-			
-				<div class="secondary-img column"><img src="http://placehold.it/390x390"></div>
+				
+				<div class="secondary-images">
+					
+					<div class="enquiry column table">
+						<div class="cell middle">
+							<ul>
+								<li><a class="download icon" href="<?php the_field('vehicle_pdf'); ?>">vehicle spec (pdf)</a></li>
+								<li><a class="email icon" href="mailto:?subject=Check out this <?php the_title();?> on Wilsons LV&amp;body=Check out this <?php the_title();?> I thought you would like. <?php the_permalink(); ?>">email to friend</a></li>
+								<li><a class="enquire icon" href="#">make enquiry</a></li>
+							</ul>
+						</div>
+					</div>
+				
+					<div class="secondary-img feature_thumb column" style="background-image: url(<?php the_field('feature_thumnail_one'); ?>);"></div>
 
-			</div>
-	</section>
+				</div>
+		</section>
 
-	<section id="right-section">
-			<div class="tertiary-img"><img src="http://placehold.it/390x390"></div>
-			<div class="vehicle-details">
-				<h2>Vehicle Details</h2>
-				<p><?php the_field('synopsis'); ?></p>
-				<dl>
-					<dt>Body Style</dt><dd><?php the_field('body_style'); ?></dd>
-					<dt>Paint Colour</dt><dd><?php the_field('paint_colour'); ?></dd>
-					<dt>Main Hide Colour</dt><dd><?php the_field('main_hide_colour'); ?></dd>
-					<dt>Secondary Hide Colour</dt><dd><?php the_field('secondary_hide_colour'); ?></dd>
-					<dt>Veneer</dt><dd><?php the_field('veneer'); ?></dd>
-					<dt>Mileage</dt><dd><?php the_field('mileage'); ?></dd>
-					<dt>Registration Date</dt><dd><?php the_field('registration_date'); ?></dd>
-					<dt>Engine</dt><dd><?php the_field('engine'); ?></dd>
-					<dt>Transmission</dt><dd><?php the_field('transmission'); ?></dd>
-					<dt>Power</dt><dd><?php the_field('power'); ?></dd>
-					<dt>Torque</dt><dd><?php the_field('torque'); ?></dd>
-					<dt>Acceleration</dt><dd><?php the_field('acceleration'); ?></dd>
-					<dt>Maximum Speed</dt><dd><?php the_field('maximum_speed'); ?></dd>
-					<dt>Hand Of Drive</dt><dd><?php the_field('hand_of_drive'); ?></dd>
-				</dl>
-				<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/arrow-right.png" width="21" height="20">enquire about this vehicle</a>
-			</div>
-	</section>
+		<section id="right-section">
+				<div class="tertiary-img feature_thumb" style="background-image: url(<?php the_field('feature_thumnail_two'); ?>);"></div>
+				<div class="vehicle-details">
+					<h2>Vehicle Details</h2>
+					<hr>
+					<p><?php the_field('synopsis'); ?></p>
+					<dl>
+					<?php 
+					$vehicle_spec = get_field('vehicle_spec'); 
+					$first_five_spec = array_slice($vehicle_spec, 5, 1000, true);
+					foreach ($first_five_spec as $first_five_item): ?>
+					<dt><?php echo $first_five_item['feature']; ?></dt><dd><?php echo $first_five_item['value']; ?></dd>
+					<?php endforeach; ?>
+					</dl>
+					<a class="more" href="#">enquire about this vehicle</a>
+				</div>
+		</section>
+
+	</div>
 
 </div>

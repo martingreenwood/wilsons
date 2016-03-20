@@ -25,11 +25,15 @@
 
 		<?php if (get_field('enable_three_column_layout')): ?>
 		<div class="trio">
-			<div class="container">
-				<div class="row">
-					<div class="column"><h2><?php the_field('first_column_title'); ?></h2><hr><?php the_field('first_column'); ?></div>
-					<div class="column"><h2><?php the_field('second_column_title'); ?></h2><hr><?php the_field('second_column'); ?></div>
-					<div class="column"><h2><?php the_field('third_column_title'); ?></h2><hr><?php the_field('third_column'); ?></div>
+			<div class="row">
+				<div class="column">
+					<div class="box"><h2><?php the_field('first_column_title'); ?></h2><hr><?php the_field('first_column'); ?></div>
+				</div>
+				<div class="column">
+					<div class="box"><h2><?php the_field('second_column_title'); ?></h2><hr><?php the_field('second_column'); ?></div>
+				</div>
+				<div class="column">
+					<div class="box"><h2><?php the_field('third_column_title'); ?></h2><hr><?php the_field('third_column'); ?></div>
 				</div>
 			</div>
 		</div>

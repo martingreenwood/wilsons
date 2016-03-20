@@ -1,0 +1,45 @@
+{
+    "key": "group_56c58f9f095f6",
+    "title": "Page Heading",
+    "fields": [
+        {
+            "key": "field_56c58fba150ce",
+            "label": "Custom Heading",
+            "name": "custom_heading",
+            "type": "text",
+            "instructions": "Enter a custom heading for the page:",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1457364413
+}

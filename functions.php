@@ -42,6 +42,8 @@ function wilsons_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'post', 274, 223, true );
+	add_image_size( 'gallery', 780, 780, true );
+	add_image_size( 'news', 550, 250, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -112,16 +114,84 @@ function create_post_type() {
 	register_post_type( 'cars',
 		array(
 			'labels' => array(
-				'name' => __('Cars'),
-				'singular_name' => __('Car')
+				'name' => __('Vehicles'),
+				'singular_name' => __('Vehicle')
 			),
 			'supports' => array('title', 'editor', 'thumbnail'),
+			'rewrite' => array('slug' => 'vehicle'),
 			'public' => true,
 			'has_archive' => true,
+			'show_in_rest' => true,
 		)
 	);
 }
 
+
+add_action( 'init', 'vehicle_make', 0 );
+
+function vehicle_make() {
+
+
+  $labels = array(
+    'name' => __( 'Vehicle Make' ),
+    'singular_name' => __( 'Vehicle Make' ),
+    'search_items' =>  __( 'Search Makes' ),
+    'all_items' => __( 'All Makes' ),
+    'parent_item' => __( 'Parent Make' ),
+    'parent_item_colon' => __( 'Parent Make:' ),
+    'edit_item' => __( 'Edit Make§' ), 
+    'update_item' => __( 'Update Make' ),
+    'add_new_item' => __( 'Add New Make' ),
+    'new_item_name' => __( 'New Make' ),
+    'menu_name' => __( 'Makes' ),
+  );
+  register_taxonomy('vehicle_make', array('cars'), array(
+    'hierarchical' => true,
+    'labels' => $labels,
+    'show_ui' => true,
+    'show_admin_column' => true,
+    'query_var' => true,
+    'show_in_rest' => true,
+  ));
+
+}
+
+add_action( 'init', 'vehicle_model_type', 0 );
+
+function vehicle_model_type() {
+
+
+  $labels = array(
+    'name' => __( 'Vehicle Type' ),
+    'singular_name' => __( 'Vehicle Type' ),
+    'search_items' =>  __( 'Search Types' ),
+    'all_items' => __( 'All Types' ),
+    'parent_item' => __( 'Parent Type' ),
+    'parent_item_colon' => __( 'Parent Type:' ),
+    'edit_item' => __( 'Edit Type' ), 
+    'update_item' => __( 'Update Type' ),
+    'add_new_item' => __( 'Add New Type' ),
+    'new_item_name' => __( 'New Type' ),
+    'menu_name' => __( 'Types' ),
+
+  );
+  register_taxonomy('vehicle_type', array('cars'), array(
+    'hierarchical' => true,
+    'labels' => $labels,
+    'show_ui' => true,
+    'show_admin_column' => true,
+    'query_var' => true,
+    'show_in_rest' => true,
+  ));
+
+}
+
+function my_allow_meta_query( $valid_vars ) {
+	
+	$valid_vars = array_merge( $valid_vars, array( 'meta_key', 'meta_value' ) );
+	return $valid_vars;
+}
+add_filter( 'rest_query_vars', 'my_allow_meta_query' );
 
 /**
  * Enqueue scripts and styles.
@@ -138,7 +208,7 @@ function wilsons_scripts() {
 	wp_enqueue_script( 'wilsons-navigation', get_template_directory_uri() . '/js/navigation.js', '', '', true );
 	wp_enqueue_script( 'fancyJS', get_template_directory_uri() . '/js/fancyapps/source/jquery.fancybox.pack.js', '', '', true );
 	wp_enqueue_script( 'fancyJSMedia', get_template_directory_uri() . '/js/fancyapps/source//helpers/jquery.fancybox-media.js', '', '', true );
-	wp_enqueue_script( 'matchheight', get_template_directory_uri() . '/js/jquery.matchheight.js', '', '', true );
+	wp_enqueue_script( 'matchheight', get_template_directory_uri() . '/js/jquery.matchHeight.js', '', '', true );
 	wp_enqueue_script( 'slickJS', '//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js', '', '', true );
 	wp_enqueue_script( 'wilsons-app', get_template_directory_uri() . '/js/app.js', '', '', true );
 

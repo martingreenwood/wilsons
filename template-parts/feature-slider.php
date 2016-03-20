@@ -29,4 +29,26 @@
 
 		</div>
 	</div>
+
+	<div id="car_search">
+		<div class="search-box">
+			<p>What are you looking for?</p>
+			<select id="vehicle_types" name="vechicle-type">
+			<option value="">Select type...</option>
+				<?php
+				$taxonomy = 'vehicle_type';
+				$tax_terms = get_terms($taxonomy);
+				foreach ($tax_terms as $tax_term):
+				?>
+				<option value="<?php echo strtolower($tax_term->name); ?>"><?php echo $tax_term->name; ?></option>
+				<?php endforeach; ?>
+			</select>
+			<select id="vehicle_makes" name="vechicle-make">
+				<option value="">Select make...</option>
+			</select>
+			<input type="buttom" id="search_cars" value="Search">
+			<div id="loading"></div>
+		</div>
+	</div>
+
 </section>

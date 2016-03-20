@@ -1,0 +1,40 @@
+{
+    "key": "group_56d9bf1a1c21f",
+    "title": "Enable Pre Footer CTA",
+    "fields": [
+        {
+            "key": "field_56d9bf2c801ae",
+            "label": "",
+            "name": "enable_prefooter_cta",
+            "type": "true_false",
+            "instructions": "Check this box to enable the pre footer CTA content defined on the options page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "9"
+            }
+        ]
+    ],
+    "menu_order": 30,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1457364417
+}

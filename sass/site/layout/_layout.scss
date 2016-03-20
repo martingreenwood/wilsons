@@ -1,5 +1,7 @@
 .container {
 	@include outer-container;
+	@include rem(padding-left, 25px);
+	@include rem(padding-right, 25px);
 }
 
 .row {

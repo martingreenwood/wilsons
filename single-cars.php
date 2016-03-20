@@ -15,12 +15,11 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php
-		while ( have_posts() ) : the_post(); ?>
+		while ( have_posts() ) : the_post();
 
-		<div class="pagination-top"><?php the_post_navigation(); ?></div>
+			the_post_navigation();
 
-			<?php get_template_part( 'template-parts/content', 'cars' );
-
+			get_template_part( 'template-parts/content', 'cars' );
 
 		endwhile; // End of the loop.
 		?>

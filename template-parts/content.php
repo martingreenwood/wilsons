@@ -30,8 +30,15 @@
 
 		<div class="entry-image column"><?php the_post_thumbnail('post'); ?></div>
 
-		<div class="read-more column"><img src="http://placehold.it/274x223"></div>
-
-		<footer class="entry-footer"></footer><!-- .entry-footer -->
+		<div class="read-more column">
+			<a href="<?php the_permalink(); ?>">
+				<div class="table">
+					<div class="cell center middle">
+						<h2>Read More</h2>
+					</div>
+				</div>
+			</a>
+		</div>
+		
 	</div>
 </article><!-- #post-## -->

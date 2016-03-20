@@ -32,11 +32,133 @@
 	right: 0;
 }
 
+.pagination, .post-navigation {
+	background-color: $light-gray;
+	min-height: 60px;
+
+	.nav-links {
+		@include outer-container;
+		@include rem(padding, 25px 0);
+	}
+
+	.prev-next-posts {
+		@include rem(padding, 25px 0);
+	}
+
+	.prev-posts-link, .next-posts-link, .nav-next, .nav-previous {
+		max-width: 50%;
+		display: block;
+
+		a {
+			text-transform: uppercase;
+    		font-weight: 700;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+	}
+
+	.next-posts-link, .nav-next {
+		float: right;
+
+		a {
+			background-image: url(assets/arrow-right-black.svg);
+			background-position: right center;
+			padding-right: 23px;
+		}
+	}
+
+	.prev-posts-link, .nav-previous {
+		float: left;
+
+		a {
+			background-image: url(assets/arrow-left-black.svg);
+			background-position: left center;
+			padding-left: 23px;
+		}
+	}
+}
+
+.search-box {
+	margin: 0 auto;
+	max-width: 768px;
+	padding: 0 24px;
+
+	#loading {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		opacity: 0;
+		z-index: -1;
+		background-color: rgba(0,0,0,0.8);
+		background-image: url(assets/ajax-loader.gif);
+		background-position: center;
+		background-repeat: no-repeat;
+		transition: all 300ms ease-in-out;
+
+		&.show {
+			opacity: 1;
+			z-index: 1;
+		}
+	}
+
+	p {
+		float: left;
+		width: 34%;
+		color: #999999;
+		background: white;
+		line-height: 3.1;
+		margin: 0;
+		padding: 0px 10px;
+	}
+
+	select {
+		float: left;
+		width: 23%;
+		color: #999999;
+		background: white;
+		border-radius: 0;
+		border: 0;
+		box-shadow: none;
+		outline: 0;
+		padding: 0 10px;
+		line-height: 3.1;
+		border-left: 1px solid #999;
+		background-image: url(assets/dropdown.svg);
+		background-repeat: no-repeat;
+		background-position: 97% center;
+		background-size: 10px auto;
+		-webkit-appearance: none;
+	}
+
+	#search_cars {
+		float: left;
+		width: 20%;
+		color: white;
+		border: 0;
+		background: #666666;
+		padding: 0 10px;
+		text-align: center;
+		line-height: 3.1;
+	}
+
+}
+
 /*==============================
 =            HOME             =
 ==============================*/
 
 .home {
+
+	#car_search {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		z-index: 6;
+		background: rgba(0,0,0,0.7);
+		padding: 40px;
+	}
 
 	#masthead {
 		@include media ($medium-screen-up) {
@@ -102,6 +224,7 @@
 
 	#feature_slider {
 		height: 100%;
+		min-height: 100%;
 		height: 100vh;
 	    background: #f9f9f9;
 
@@ -118,38 +241,6 @@
 				background-color:  rgba(0,0,0,0.15);
 			}
 	    }
-
-		.slick-arrow {
-		    position: absolute;
-			width: 23px;
-			height: 41px;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: contain;
-			top: 50%;
-			margin-top: -20.5px;
-			outline: 0;
-			box-shadow: none;
-			border: 0;
-			text-indent: -9999px;
-			z-index: 50;
-
-			&:hover, &:focus, &:active {
-				background-color: transparent;
-				outline: 0;
-				box-shadow: none;
-				border: 0;
-			}
-		}
-
-		.slick-next {
-			background-image: url(assets/slide-next.svg);
-			right: 20px;
-		}
-		.slick-prev {
-			background-image: url(assets/slide-prev.svg);
-			left: 20px;
-		}
 
 		.caption {
 			max-width: 480px;
@@ -225,9 +316,15 @@
 
 		.secondary-text {
 			float: left;
-			width: 30%;
-			height: 400px;
-			@include rem(padding-right, 50px);
+			width: 33.333%;
+			min-height: 400px;
+			height: 100%;
+
+			.table {
+				max-width: 250px;
+				margin: auto;
+				@include rem(padding, 50px 0);
+			}
 
 			.more {
 				background-image: url(assets/arrow-right-black.svg);
@@ -244,12 +341,13 @@
 		.secondary-images {
 			float: left;
 			width: 66.666%;
-			height: 400px;
+			min-height: 400px;
+			height: 100%;
 
 			.img {
 				float: left;
 				width: 50%;
-				height: 400px;
+				height: 100%;
 				background-repeat: no-repeat;
 				background-size: cover;
 				background-position: center;
@@ -316,8 +414,15 @@
 
 		.tertiary-text {
 			float: right;
-			width: 30%;
-			@include rem(padding-left, 50px);
+			width: 33.333%;
+			min-height: 400px;
+			height: 100%;
+
+			.table {
+				max-width: 250px;
+				margin: auto;
+				@include rem(padding, 50px 0);
+			}
 
 			.more {
 				background-image: url(assets/arrow-right-black.svg);
@@ -402,48 +507,6 @@
 			}
 		}
 	}
-
-	.pagination {
-		background-color: $light-gray;
-		min-height: 60px;
-
-		.prev-next-posts {
-			
-			@include rem(padding, 25px 0);
-
-			.prev-posts-link, .next-posts-link {
-				max-width: 50%;
-				display: block;
-
-				a {
-					text-transform: uppercase;
-		    		font-weight: 700;
-					background-repeat: no-repeat;
-					background-size: contain;
-				}
-			}
-
-			.next-posts-link {
-				float: right;
-
-				a {
-					background-image: url(assets/arrow-right-black.svg);
-					background-position: right center;
-					padding-right: 23px;
-				}
-			}
-
-			.prev-posts-link {
-				float: left;
-
-				a {
-					background-image: url(assets/arrow-left-black.svg);
-					background-position: left center;
-					padding-left: 23px;
-				}
-			}
-		}
-	}
 }
 
 .cta {
@@ -488,9 +551,10 @@
 =          SINGLE CAR          =
 ==============================*/
 
-.pagination-top {
-	background-color: $light-gray;
-	@include rem(padding, 15px 38px);
+.single-cars {
+	.entry-content {
+		@include rem(margin-bottom, 50px);
+	}	
 }
 
 .entry-content {
@@ -548,8 +612,15 @@
 }
 
 .car-details {
-	//float: left;
+	float: left;
 	width: 100%;
+
+	.feature_thumb {
+		height: 400px;
+		background-repeat:no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
 
 	#left-section {
 		position: relative;
@@ -635,8 +706,9 @@
 		}
 
 		.vehicle-details {
-			width: 100%;
-			@include rem(padding, 20px 38px);
+			max-width: 250px;
+			margin: auto;
+			@include rem(padding, 50px 0);
 
 			dl {
 				dt, dd {
@@ -645,14 +717,18 @@
     				margin: 0;
 				}
 			}
+		}
 
-			a {
-				text-transform: uppercase;
-
-				img {
-					display: inline-block;
-				}
-			}
+		.more {
+			background-image: url(assets/arrow-right-black.svg);
+			background-position: left center;
+			background-repeat: no-repeat;
+			background-size: 21px 19px;
+			padding: 0 0 0 32px;
+			margin-top: 50px;
+			float: none;
+			display: inline-block;
+			text-transform: uppercase;
 		}
 	}
 }
@@ -662,8 +738,8 @@
 ==============================*/
 
 .entry-content {
-
 	@include rem(margin-top, 50px);
+	margin-bottom: 0;
 
 	.intro-text {
 		@include row;
@@ -719,11 +795,14 @@
 		@include rem(padding, 50px);
 		background-color: $brand-secondary;
 
-
 		.column {
 
+			.box {
+				max-width: 250px;
+				margin: 0 auto;
+			}
+
 			@include span-columns(12);
-			max-width: 281px;
 
 			@include media ($medium-screen-up) {
 				@include span-columns(3);
@@ -731,7 +810,6 @@
 
 			@include media ($large-screen-up) {
 				@include span-columns(4);
-				@include rem(margin-right, 158px);
 			}
 
 			hr {
@@ -744,7 +822,6 @@
 			}
 
 			h2 {
-				max-width: 235px;
 			}
 		}
 	}
@@ -756,10 +833,15 @@
 	
 		.left_section {
 			float: left;
-			width: 30%;
-			padding-right: 50px;
+			width: 33.333%;
 			min-height: 400px;
-			height: 400px;
+			height: 100%;
+
+			.table {
+				max-width: 250px;
+				margin: auto;
+				@include rem(padding, 50px 0);
+			}
 
 			.more {
 				background-image: url(assets/arrow-right-black.svg);
@@ -794,10 +876,15 @@
 	
 		.right_section {
 			float: right;
-			width: 30%;
-			padding-left: 50px;
+			width: 33.333%;
 			min-height: 400px;
-			height: 400px;
+			height: 100%;
+
+			.table {
+				max-width: 250px;
+				margin: auto;
+				@include rem(padding, 50px 0);
+			}
 
 			.more {
 				background-image: url(assets/arrow-right-black.svg);
@@ -833,13 +920,18 @@
 =             BLOG             =
 ==============================*/
 
+.blog {
+
+	#content {
+		@include rem(margin, 50px 0);
+	}
+}
+
 .site-content {
 
 	.post {
 
 		.container {
-			@include rem(margin-top, 50px);
-			@include rem(margin-bottom, 50px);
 
 			.entry-content {
 				float: left;
@@ -850,6 +942,19 @@
 				float: left;
 				width: 23%;
 				@include rem(margin-top, 50px);
+				background: #080707;
+
+				a {
+					color: white;
+					height: 100%;
+					width: 100%;
+					display: block;
+
+					h2 {
+						color: white;
+						margin: 0;
+					}
+				}
 
 				img {
 					width: 100%;
@@ -868,8 +973,17 @@
 ==============================*/
 
 .single-post {
+	
 	.hentry {
 		@include rem(padding, 50px 0);
+	}
+
+	.entry-header {
+		@include rem(margin-bottom, 50px);
+	}
+
+	.entry-content {
+		margin-top: 0;
 	}
 }
 

@@ -30,47 +30,43 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 	<section id="section_one">
-		<div class="container">
-			<div class="row">
+		<div class="row">
 
-				<div class="left_section column">
-					<div class="table">
-						<div class="cell middle text">
-							<?php the_field('bottom_text'); ?>
-							<a class="more" href="<?php the_field('read_more_link_left'); ?>">read more</a>
-						</div>
+			<div class="left_section column">
+				<div class="table">
+					<div class="cell middle text">
+						<?php the_field('bottom_text'); ?>
+						<a class="more" href="<?php the_field('read_more_link_left'); ?>">read more</a>
 					</div>
 				</div>
-				<div class="right_section column bleed-right">
-					<div class="img" style="background-image: url(<?php the_field('additional_image_one'); ?>)"></div>
-					<div class="img" style="background-image: url(<?php the_field('additional_image_two'); ?>)"></div>
-				</div>
-				<div class="clearfix"></div>
-
 			</div>
+			<div class="right_section column">
+				<div class="img" style="background-image: url(<?php the_field('additional_image_one'); ?>)"></div>
+				<div class="img" style="background-image: url(<?php the_field('additional_image_two'); ?>)"></div>
+			</div>
+			<div class="clearfix"></div>
+
 		</div>
 	</section>
 
 	<section id="section_two">
-		<div class="container">
-			<div class="row">
+		<div class="row">
 
-				<div class="right_section column">
-					<div class="table">
-						<div class="cell middle text">
-							<?php the_field('bottom_text'); ?>
-							<a class="more" href="<?php the_field('read_more_link_left'); ?>">read more</a>
-						</div>
+			<div class="right_section column">
+				<div class="table">
+					<div class="cell middle text">
+						<?php the_field('bottom_text'); ?>
+						<a class="more" href="<?php the_field('read_more_link_left'); ?>">read more</a>
 					</div>
 				</div>
-				<div class="left_section column bleed-left">
-					<div class="img blank"></div>
-					<div class="img" style="background-image: url(<?php the_field('additional_image_three'); ?>)"></div>
-				</div>
-				<div class="clearfix"></div>
-
 			</div>
-		</div>	
+			<div class="left_section column">
+				<div class="img blank"></div>
+				<div class="img" style="background-image: url(<?php the_field('additional_image_three'); ?>)"></div>
+			</div>
+			<div class="clearfix"></div>
+
+		</div>
 	</section>
 
 <?php

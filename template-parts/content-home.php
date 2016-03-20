@@ -33,7 +33,7 @@
 </section>
 
 <section id="section_one">
-	<div class="container">	
+	<div class="row">	
 
 		<div class="left-column">
 			<div class="secondary-text column">
@@ -75,7 +75,7 @@
 </section>
 
 <section id="section_two">
-	<div class="container">	
+	<div class="row">	
 
 		<div class="right-column">
 
