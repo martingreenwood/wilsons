@@ -32,8 +32,9 @@
 
 	<div id="car_search">
 		<div class="search-box">
+			<input type="buttom" id="search_cars" value="Search">
 			<p>What are you looking for?</p>
-			<select id="vehicle_types" name="vechicle-type">
+			<select id="vehicle_types" name="">
 			<option value="">Select type...</option>
 				<?php
 				$taxonomy = 'vehicle_type';
@@ -43,10 +44,9 @@
 				<option value="<?php echo strtolower($tax_term->name); ?>"><?php echo $tax_term->name; ?></option>
 				<?php endforeach; ?>
 			</select>
-			<select id="vehicle_makes" name="vechicle-make">
+			<select id="vehicle_makes" name="">
 				<option value="">Select make...</option>
 			</select>
-			<input type="buttom" id="search_cars" value="Search">
 			<div id="loading"></div>
 		</div>
 	</div>

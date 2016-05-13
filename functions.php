@@ -211,6 +211,7 @@ function wilsons_scripts() {
 	wp_enqueue_script( 'matchheight', get_template_directory_uri() . '/js/jquery.matchHeight.js', '', '', true );
 	wp_enqueue_script( 'slickJS', '//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js', '', '', true );
 	wp_enqueue_script( 'wilsons-app', get_template_directory_uri() . '/js/app.js', '', '', true );
+	wp_enqueue_script( 'wilsons-search', get_template_directory_uri() . '/js/search.js', '', '', true );
 
 }
 add_action( 'wp_enqueue_scripts', 'wilsons_scripts' );

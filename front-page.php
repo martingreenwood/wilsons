@@ -16,6 +16,15 @@ get_header(); ?>
 
 	<?php get_template_part( 'template-parts/feature', 'slider' ); ?>
 
+	<div id="vehicle_results_box">
+		<div class="container">
+			<div class="row">
+				<div id="loader"></div>
+				<div id="vehicle_results"></div>
+			</div>
+		</div>
+	</div>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 

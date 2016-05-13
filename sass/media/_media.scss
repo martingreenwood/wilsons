@@ -34,7 +34,7 @@ object {
 	box-shadow: none;
 	border: 0;
 	text-indent: -9999px;
-	z-index: 50;
+	z-index: 1;
 
 	&:hover, &:focus, &:active {
 		background-color: transparent;

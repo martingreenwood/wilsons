@@ -1,3 +1,40 @@
 @import "buttons";
 
 @import "fields";
+
+#main {
+	
+	.gform_wrapper {
+		max-width: 100%;
+
+		input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea {
+			color: #58595B;
+			border: 1px solid #000000;
+			outline: 0;
+			box-shadow: none;
+		}
+
+		.ginput_complex {
+			
+			input[type=text], input[type=url], input[type=email], input[type=tel], input[type=number], input[type=password] {
+				width: 94%;
+			}
+		}
+
+		.ginput_container_name {
+			
+			span {
+				float: left;
+				display: block;
+				padding: 0;
+				margin-right: 0;
+			}
+		}
+
+		.gform_footer {
+			padding: 10px 0 0 0;
+			margin: 0;
+			clear: both;
+		}
+	}
+}

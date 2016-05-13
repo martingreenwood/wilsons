@@ -13,14 +13,19 @@
 	
 	.site-info {
 		@include row;
-		@include rem(padding, 21px 0);
+		@include rem(padding, 20px 0);
+
+		@include media ($medium-screen-up) {
+			@include rem(padding, 20px);
+		}
 
 		.contact-details {
 			@include span-columns(12);
-			@include rem(padding-top, 25px);
+			@include rem(padding, 20px);
 
 			@include media ($medium-screen-up) {
 				@include span-columns(3);
+				@include rem(padding, 25px 0 0 0);
 			}
 	
 			p {
@@ -31,10 +36,11 @@
 		}
 
 		.footer-menus {
-			@include span-columns(12);
+			display: none;
 
 			@include media ($medium-screen-up) {
 				@include span-columns(6);
+				display: block;
 			}
 		}
 
