@@ -350,6 +350,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/placeholder.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 33605,
+		"inputAbbreviatedPath": "\/assets\/placeholder.png",
+		"outputAbbreviatedPath": "\/assets\/placeholder.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/play.png": {
 		"fileType": 32768,
 		"ignore": 0,

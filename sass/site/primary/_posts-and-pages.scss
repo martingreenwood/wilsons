@@ -256,17 +256,18 @@
 		
 		.img {
 			float: left;
-			width: 30%;
+			width: 100%;
 			margin-bottom: 15px;
 
 			@include media ($medium-screen-up) {
-				width: 100%;
+				width: 30%;
 			}
 		}
 
 		img {
 			float: left;
 			width: 100%;
+			position: relative;
 
 			&:after {
 				content: "Awaiting Iamge";
@@ -279,7 +280,7 @@
 				width: 100%;
 				text-align: center;
 				background: #cccccc;
-				padding: 98px 0;
+				padding: 114px 0;
 			}
 		}
 

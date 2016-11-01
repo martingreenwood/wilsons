@@ -1335,14 +1335,15 @@ a {
       border-bottom: 0; }
     #vehicle_results_box .search_result .img {
       float: left;
-      width: 30%;
+      width: 100%;
       margin-bottom: 15px; }
       @media screen and (min-width: 680px) {
         #vehicle_results_box .search_result .img {
-          width: 100%; } }
+          width: 30%; } }
     #vehicle_results_box .search_result img {
       float: left;
-      width: 100%; }
+      width: 100%;
+      position: relative; }
       #vehicle_results_box .search_result img:after {
         content: "Awaiting Iamge";
         display: block;
@@ -1354,7 +1355,7 @@ a {
         width: 100%;
         text-align: center;
         background: #cccccc;
-        padding: 98px 0; }
+        padding: 114px 0; }
     #vehicle_results_box .search_result .vehicle_info {
       float: left;
       width: 100%; }
