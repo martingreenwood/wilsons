@@ -25,8 +25,8 @@
 <section id="featured-video" <?php if ($feature_img): ?> style="background-image: url('<?php echo $feature_img[0]; ?>')" <?php endif; ?>>
 	<div class="table">
 		<div class="cell middle center">
-			<h2><?php the_post_thumbnail_title() ?></h2>
-			<p><?php the_post_thumbnail_caption() ?></p>
+			<h2><?php wilsons_post_thumbnail_title() ?></h2>
+			<p><?php wilsons_post_thumbnail_caption() ?></p>
 			<a class="popup fancybox.iframe" href="<?php the_field('feature_vid_url'); ?>">Play</a>
 		</div>
 	</div>

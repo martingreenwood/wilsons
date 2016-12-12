@@ -38,7 +38,7 @@ if( function_exists('acf_add_options_page')) {
  * Post thumbnail caption
  *
  */
-function the_post_thumbnail_caption() {
+function wilsons_post_thumbnail_caption() {
 	global $post;
 
 	$thumbnail_id    = get_post_thumbnail_id($post->ID);
@@ -53,7 +53,7 @@ function the_post_thumbnail_caption() {
  * Post thumbnail description
  *
  */
-function the_post_thumbnail_description() {
+function wilsons_post_thumbnail_description() {
 	global $post;
 
 	$thumbnail_id    = get_post_thumbnail_id($post->ID);
@@ -68,7 +68,7 @@ function the_post_thumbnail_description() {
  * Post thumbnail title
  *
  */
-function the_post_thumbnail_title() {
+function wilsons_post_thumbnail_title() {
 	global $post;
 
 	$thumbnail_id    = get_post_thumbnail_id($post->ID);
