@@ -47,3 +47,18 @@ $j(function() {
 		closeEffect	: 'none'
 	});
 });
+
+
+/*===================================
+=            MENU SCROLL            =
+===================================*/
+
+$j(window).scroll(function($) {
+	var scroll = $j(window).scrollTop();
+
+	if (scroll > 5) { // this refers to window
+		$j('.site-header').addClass('scrolled');
+	} else {
+		$j('.site-header').removeClass('scrolled');
+	}
+});

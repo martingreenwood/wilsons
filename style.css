@@ -160,6 +160,7 @@ ol {
   list-style-type: none;
   margin: 0;
   padding: 0; }
+
 dl {
   margin-bottom: 0.8125rem; }
   dl dt {
@@ -679,7 +680,8 @@ a {
         left: -9999px;
         left: -999.9rem;
         top: 0; }
-      .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
+      .main-navigation ul ul li:hover > ul,
+      .main-navigation ul ul li.focus > ul {
         left: 100%; }
       .main-navigation ul ul a {
         width: 200px;
@@ -718,6 +720,7 @@ a {
 .main-navigation.toggled .menu-toggle {
   z-index: 9999999;
   color: white; }
+
 .main-navigation.toggled ul {
   position: fixed;
   top: 0;
@@ -738,20 +741,22 @@ a {
 @media screen and (min-width: 1046px) {
   .menu-toggle {
     display: none; }
-
   .main-navigation ul {
     display: block; } }
+
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
   margin: 0 0 15px;
   margin: 0 0 1.5rem;
   overflow: hidden; }
+
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
   float: left;
   width: 50%; }
+
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
@@ -905,7 +910,8 @@ a {
   z-index: 10;
   width: 100%;
   height: 53px;
-  background: white; }
+  background: white;
+  transition: background-color 300ms; }
   #masthead::after {
     clear: both;
     content: "";
@@ -914,7 +920,14 @@ a {
     #masthead {
       height: auto;
       height: auto;
-      background-color: transparent; } }
+      background-color: transparent; }
+      #masthead.scrolled {
+        background: white; }
+        #masthead.scrolled #social ul li a {
+          color: #080707 !important;
+          border-color: #080707 !important; }
+        #masthead.scrolled #social p {
+          color: #080707 !important; } }
   #masthead .container {
     position: relative; }
   #masthead .site-branding {
@@ -1408,6 +1421,7 @@ a {
 ==============================*/
 .home #masthead #phone {
   display: none; }
+
 .home #masthead #social {
   padding-bottom: 40px; }
   @media screen and (min-width: 680px) {
@@ -1418,6 +1432,7 @@ a {
         color: inherit; }
     .home #masthead #social p {
       color: white; } }
+
 .home #masthead .main-navigation #primary-menu li:hover {
   color: white;
   border-color: white; }
@@ -1426,6 +1441,7 @@ a {
     .home #masthead .main-navigation #primary-menu li:hover a:after {
       opacity: 1;
       background-color: white; }
+
 .home #feature_slider {
   height: 100%;
   min-height: 100%;
@@ -1465,11 +1481,13 @@ a {
     color: white;
     text-transform: uppercase;
     margin-top: 5px; }
+
 .home .entry-content {
   text-align: center;
   padding: 50px 0;
   padding: 5rem 0;
   margin-top: 0; }
+
 .home #featured-video {
   width: 100%;
   min-height: 550px;
@@ -1500,6 +1518,7 @@ a {
     height: 90px;
     display: inline-block;
     text-indent: -9999px; }
+
 .home #section_one {
   position: relative;
   float: left;
@@ -1561,6 +1580,7 @@ a {
         margin-top: 5px;
         margin-right: 20px;
         margin-bottom: 20px; }
+
 .home #section_two {
   position: relative;
   float: left;
@@ -1769,6 +1789,7 @@ a {
       width: 65%; }
       .entry-content .vehicle-intro .description:last-child {
         margin-right: 0; } }
+
 .entry-content .vehicle-intro .spec {
   float: left;
   display: block;
@@ -2058,6 +2079,7 @@ a {
     float: left;
     text-transform: uppercase;
     margin-top: 5px; }
+
 .what-we-offer #section_one .right_section {
   float: right;
   width: 100%;
@@ -2067,6 +2089,7 @@ a {
       width: 66.666%;
       min-height: 400px;
       height: 400px; } }
+
 .what-we-offer #section_one .img {
   float: left;
   width: 100%;
@@ -2078,6 +2101,7 @@ a {
     .what-we-offer #section_one .img {
       width: 50%;
       height: 100%; } }
+
 .what-we-offer #section_two .right_section {
   float: right;
   width: 100%; }
@@ -2101,6 +2125,7 @@ a {
     float: left;
     text-transform: uppercase;
     margin-top: 5px; }
+
 .what-we-offer #section_two .left_section {
   float: left;
   display: none; }
@@ -2110,6 +2135,7 @@ a {
       width: 66.666%;
       min-height: 400px;
       height: 400px; } }
+
 .what-we-offer #section_two .img {
   float: left;
   width: 50%;
@@ -2172,9 +2198,11 @@ a {
 .single-post .hentry {
   padding: 50px 0;
   padding: 5rem 0; }
+
 .single-post .entry-header {
   margin-bottom: 50px;
   margin-bottom: 5rem; }
+
 .single-post .entry-content {
   margin-top: 0; }
 

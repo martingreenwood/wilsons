@@ -80,7 +80,6 @@ $j('#vehicle_types').change(function() {
 					            make__options = '<option value="'+vehicle_make_slug+'">'+vehicle_make_name+'</option>';
 								document.getElementById("vehicle_makes").innerHTML += make__options;
 								sortlist();
-
 						    }
 						});
 
