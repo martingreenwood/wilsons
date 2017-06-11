@@ -22,7 +22,7 @@
 			</div>
 			
 			<div class="spec">
-				<h2>Price  <span>£<?php the_field('price'); ?></span></h2>
+				<h2>Price  <span>£<?php the_field('vehicle_price'); ?></span></h2>
 				<hr>
 				<dl>
 					<?php 

@@ -28,7 +28,7 @@
 					<?php the_post_thumbnail('news'); ?>
 					<div class="entry-title">
 						<?php the_title('<h2>','</h2>'); ?>
-						<h3 class="price">Price <span>£<?php the_field('price'); ?></span></h3>
+						<h3 class="price">Price <span>£<?php the_field('vehicle_price'); ?></span></h3>
 						<hr>
 					</div>
 					<div class="entry-content">

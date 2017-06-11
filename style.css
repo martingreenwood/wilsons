@@ -970,14 +970,14 @@ a {
         opacity: 0;
         height: 2px;
         position: absolute;
-        background-color: #A7A9AC;
+        background-color: black;
         width: 100%;
         left: 0;
         bottom: -3px; }
       #masthead .main-navigation #primary-menu li:active, #masthead .main-navigation #primary-menu li:hover, #masthead .main-navigation #primary-menu li:focus {
-        color: #A7A9AC; }
+        color: black; }
         #masthead .main-navigation #primary-menu li:active a, #masthead .main-navigation #primary-menu li:hover a, #masthead .main-navigation #primary-menu li:focus a {
-          color: #A7A9AC; }
+          color: black; }
           #masthead .main-navigation #primary-menu li:active a:after, #masthead .main-navigation #primary-menu li:hover a:after, #masthead .main-navigation #primary-menu li:focus a:after {
             opacity: 1; }
   #masthead #social {
@@ -1163,8 +1163,6 @@ a {
   background-repeat: no-repeat; }
   #feature_img .container, #feature_img .row {
     height: 100%; }
-  #feature_img .row {
-    background-color: rgba(0, 0, 0, 0.15); }
   #feature_img h1 {
     max-width: 480px;
     font-size: 36px;
@@ -1214,7 +1212,7 @@ a {
     .pagination .next-posts-link a, .pagination .nav-next a, .post-navigation .next-posts-link a, .post-navigation .nav-next a {
       background-image: url(assets/arrow-right-black.svg);
       background-position: right center;
-      padding-right: 23px;
+      padding-right: 33px;
       width: 19px;
       overflow: hidden;
       display: inline-block;
@@ -1230,7 +1228,7 @@ a {
     .pagination .prev-posts-link a, .pagination .nav-previous a, .post-navigation .prev-posts-link a, .post-navigation .nav-previous a {
       background-image: url(assets/arrow-left-black.svg);
       background-position: left center;
-      padding-left: 23px;
+      padding-left: 33px;
       width: 19px;
       overflow: hidden;
       display: inline-block;
@@ -1434,13 +1432,13 @@ a {
       color: white; } }
 
 .home #masthead .main-navigation #primary-menu li:hover {
-  color: white;
-  border-color: white; }
+  color: black;
+  border-color: black; }
   .home #masthead .main-navigation #primary-menu li:hover a {
-    color: white; }
+    color: black; }
     .home #masthead .main-navigation #primary-menu li:hover a:after {
       opacity: 1;
-      background-color: white; }
+      background-color: black; }
 
 .home #feature_slider {
   height: 100%;
@@ -2073,6 +2071,10 @@ a {
     margin: auto;
     padding: 50px 20px;
     padding: 5rem 2rem; }
+    @media screen and (min-width: 1046px) {
+      .what-we-offer #section_one .left_section .table {
+        padding: 50px 0;
+        padding: 5rem 0; } }
   .what-we-offer #section_one .left_section .more {
     background-image: url(assets/arrow-right-black.svg);
     background-position: left bottom;
@@ -2119,6 +2121,10 @@ a {
     margin: auto;
     padding: 50px 20px;
     padding: 5rem 2rem; }
+    @media screen and (min-width: 680px) {
+      .what-we-offer #section_two .right_section .table {
+        padding: 50px 0;
+        padding: 5rem 0; } }
   .what-we-offer #section_two .right_section .more {
     background-image: url(assets/arrow-right-black.svg);
     background-position: left bottom;
