@@ -27,7 +27,9 @@
 		<div class="cell middle center">
 			<h2><?php echo wilsons_post_thumbnail_title() ?></h2>
 			<p><?php echo wilsons_post_thumbnail_caption() ?></p>
+			<?php if (get_field('feature_vid_url')): ?>
 			<a class="popup fancybox.iframe" href="<?php the_field('feature_vid_url'); ?>">Play</a>
+			<?php endif; ?>
 		</div>
 	</div>
 </section>
@@ -40,7 +42,9 @@
 				<div class="table">
 					<div class="cell middle">
 						<?php the_field('middle_text_section'); ?>
-						<a class="more" href="<?php the_field('middle_section_link'); ?>">read more</a>
+						<?php if (get_field('middle_section_link')): ?>
+							<a class="more" href="<?php the_field('middle_section_link'); ?>">read more</a>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>
@@ -52,7 +56,9 @@
 				<div class="img" style="background-image: url(<?php echo $fcoImage; ?>);">
 					<div class="table">
 						<div class="cell bottom">
-							<a class="more" href="<?php echo $fcoLink; ?>"><?php echo $fcoLinktext; ?></a>
+							<?php if (get_field('fco_link')): ?>
+								<a class="more" href="<?php echo $fcoLink; ?>"><?php echo $fcoLinktext; ?></a>
+							<?php endif; ?>
 						</div>
 					</div>
 				</div>
@@ -63,7 +69,9 @@
 				<div class="img" style="background-image: url(<?php echo $fctImage; ?>);">
 					<div class="table">
 						<div class="cell bottom">
+						<?php if (get_field('fct_link')): ?>
 							<a class="more" href="<?php echo $fctlink; ?>"><?php echo $fctLinktext; ?></a>
+						<?php endif; ?>
 						</div>
 					</div>
 				</div>
@@ -88,7 +96,9 @@
 					<div class="cell middle center">
 						<div class="caption">
 							<h3><?php echo $lfcTitle; ?></h3>
+							<?php if (get_field('lfc_link')): ?>
 							<a class="more" href="<?php echo $lfclink; ?>"><?php echo $lfcLinktext; ?></a>
+							<?php endif; ?>
 						</div>
 					</div>
 				</div>
@@ -98,7 +108,9 @@
 				<div class="table">
 					<div class="cell middle">
 						<?php the_field('bottom_text_section'); ?>
+						<?php if (get_field('bottom_section_link')): ?>
 						<a class="more" href="<?php the_field('bottom_section_link'); ?>">Read More</a>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>

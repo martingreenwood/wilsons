@@ -37,7 +37,7 @@ function sortlist(){
 $j('#vehicle_types').change(function() {
 	$j('#loading').addClass('show');
 
-	var vehicle_types = document.getElementById('vehicle_types').value;	//console.log(vehicle_types);
+	var vehicle_types = document.getElementById('vehicle_types').value;	 // console.log(vehicle_types);
 	var vehicle_makes = document.getElementById('vehicle_makes');
 		document.getElementById('vehicle_makes').options.length = 0;
 		document.getElementById("vehicle_makes").innerHTML = '<option value="">Select make...</option>';

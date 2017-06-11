@@ -920,7 +920,7 @@ a {
     #masthead {
       height: auto;
       height: auto;
-      background-color: transparent; }
+      background-color: rgba(255, 255, 255, 0.8); }
       #masthead.scrolled {
         background: white; }
         #masthead.scrolled #social ul li a {
@@ -1456,10 +1456,11 @@ a {
     .home #feature_slider .slick-slide .table {
       background-color: rgba(0, 0, 0, 0.15); }
   .home #feature_slider .caption {
-    max-width: 480px;
+    max-width: 580px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 20px; }
+    padding: 0 20px;
+    text-align: center; }
   .home #feature_slider h2 {
     text-align: center;
     color: white;
@@ -1477,7 +1478,7 @@ a {
     background-repeat: no-repeat;
     background-size: 21px 19px;
     padding: 0 0 23px 0;
-    float: right;
+    float: none;
     color: white;
     text-transform: uppercase;
     margin-top: 5px; }
@@ -1952,6 +1953,8 @@ a {
       clear: both;
       content: "";
       display: table; }
+    .entry-content .intro-text p:first-of-type {
+      margin-bottom: 0; }
     @media screen and (min-width: 680px) {
       .entry-content .intro-text {
         width: 100%;
@@ -1959,8 +1962,8 @@ a {
         max-width: 870px;
         margin-left: auto;
         margin-right: auto;
-        padding: 0 20px 40px;
-        padding: 0 2rem 4rem; } }
+        padding: 0 20px 0;
+        padding: 0 2rem 0; } }
     .entry-content .intro-text hr {
       width: 40px;
       margin: 15px 0;
