@@ -6,7 +6,14 @@
  * @package wilsons
  */
 
-$feature_img = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'full');
+$page_for_posts = get_option( 'page_for_posts' );
+
+if (is_home()) {
+	$pID = $page_for_posts;
+} else {
+	$pID = $post->ID;
+}
+$feature_img = wp_get_attachment_image_src( get_post_thumbnail_id( $pID ), 'full');
 
 ?>
 
