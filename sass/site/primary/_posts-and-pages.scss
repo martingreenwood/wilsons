@@ -1001,6 +1001,10 @@
 			margin: auto;
 			@include rem(padding, 50px 20px);
 
+			@include media ($large-screen-up) {
+				@include rem(padding, 50px 0px);
+			}
+
 			dl {
 				dt, dd {
     				float: left;
