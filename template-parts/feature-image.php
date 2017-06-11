@@ -6,7 +6,7 @@
  * @package wilsons
  */
 
-$feature_img = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full');
+$feature_img = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'full');
 
 ?>
 
