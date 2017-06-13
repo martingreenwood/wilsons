@@ -11,7 +11,7 @@
 
 ?>
 
-<?php if (get_field('enable_prefooter_cta')): ?>
+<?php if (get_field('enable_prefooter_cta') && !is_page('about')): ?>
 <div class="cta">
 	<div class="table">
 		<div class="cell middle center cta-text">

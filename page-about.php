@@ -49,6 +49,18 @@ get_header(); ?>
 		</div>
 	</section>
 
+	<?php if (get_field('enable_prefooter_cta')): ?>
+	<div class="cta">
+		<div class="table">
+			<div class="cell middle center cta-text">
+				<h3><?php the_field('cta_title', 'option'); ?></h3>
+				<p><?php the_field('cta_text', 'option'); ?></p>
+				<a class="more" href="<?php the_field('cta_link', 'option'); ?>"><?php the_field('cta_link_text', 'option'); ?></a>
+			</div>
+		</div>
+	</div>
+	<?php endif; ?>
+
 	<section id="section_two">
 		<div class="row">
 
