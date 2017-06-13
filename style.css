@@ -2061,25 +2061,30 @@ a {
       .entry-content .trio .column h2, .entry-content .trio .column p {
         color: #ffffff; }
 
-.what-we-offer #section_one .left_section {
+.what-we-offer #section_one .left_section,
+.about #section_one .left_section {
   float: left;
   width: 100%;
   min-height: 250px; }
   @media screen and (min-width: 680px) {
-    .what-we-offer #section_one .left_section {
+    .what-we-offer #section_one .left_section,
+    .about #section_one .left_section {
       width: 33.333%;
       min-height: 400px;
       height: 100%; } }
-  .what-we-offer #section_one .left_section .table {
+  .what-we-offer #section_one .left_section .table,
+  .about #section_one .left_section .table {
     max-width: 250px;
     margin: auto;
     padding: 50px 20px;
     padding: 5rem 2rem; }
     @media screen and (min-width: 1046px) {
-      .what-we-offer #section_one .left_section .table {
+      .what-we-offer #section_one .left_section .table,
+      .about #section_one .left_section .table {
         padding: 50px 0;
         padding: 5rem 0; } }
-  .what-we-offer #section_one .left_section .more {
+  .what-we-offer #section_one .left_section .more,
+  .about #section_one .left_section .more {
     background-image: url(assets/arrow-right-black.svg);
     background-position: left bottom;
     background-repeat: no-repeat;
@@ -2089,17 +2094,20 @@ a {
     text-transform: uppercase;
     margin-top: 5px; }
 
-.what-we-offer #section_one .right_section {
+.what-we-offer #section_one .right_section,
+.about #section_one .right_section {
   float: right;
   width: 100%;
   height: 500px; }
   @media screen and (min-width: 680px) {
-    .what-we-offer #section_one .right_section {
+    .what-we-offer #section_one .right_section,
+    .about #section_one .right_section {
       width: 66.666%;
       min-height: 400px;
       height: 400px; } }
 
-.what-we-offer #section_one .img {
+.what-we-offer #section_one .img,
+.about #section_one .img {
   float: left;
   width: 100%;
   height: 250px;
@@ -2107,29 +2115,35 @@ a {
   background-size: cover;
   background-position: center; }
   @media screen and (min-width: 680px) {
-    .what-we-offer #section_one .img {
+    .what-we-offer #section_one .img,
+    .about #section_one .img {
       width: 50%;
       height: 100%; } }
 
-.what-we-offer #section_two .right_section {
+.what-we-offer #section_two .right_section,
+.about #section_two .right_section {
   float: right;
   width: 100%; }
   @media screen and (min-width: 680px) {
-    .what-we-offer #section_two .right_section {
+    .what-we-offer #section_two .right_section,
+    .about #section_two .right_section {
       display: block;
       width: 33.333%;
       min-height: 400px;
       height: 100%; } }
-  .what-we-offer #section_two .right_section .table {
+  .what-we-offer #section_two .right_section .table,
+  .about #section_two .right_section .table {
     max-width: 250px;
     margin: auto;
     padding: 50px 20px;
     padding: 5rem 2rem; }
     @media screen and (min-width: 680px) {
-      .what-we-offer #section_two .right_section .table {
+      .what-we-offer #section_two .right_section .table,
+      .about #section_two .right_section .table {
         padding: 50px 0;
         padding: 5rem 0; } }
-  .what-we-offer #section_two .right_section .more {
+  .what-we-offer #section_two .right_section .more,
+  .about #section_two .right_section .more {
     background-image: url(assets/arrow-right-black.svg);
     background-position: left bottom;
     background-repeat: no-repeat;
@@ -2139,17 +2153,20 @@ a {
     text-transform: uppercase;
     margin-top: 5px; }
 
-.what-we-offer #section_two .left_section {
+.what-we-offer #section_two .left_section,
+.about #section_two .left_section {
   float: left;
   display: none; }
   @media screen and (min-width: 680px) {
-    .what-we-offer #section_two .left_section {
+    .what-we-offer #section_two .left_section,
+    .about #section_two .left_section {
       display: block;
       width: 66.666%;
       min-height: 400px;
       height: 400px; } }
 
-.what-we-offer #section_two .img {
+.what-we-offer #section_two .img,
+.about #section_two .img {
   float: left;
   width: 50%;
   height: 100%;
