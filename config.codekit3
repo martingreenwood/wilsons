@@ -789,6 +789,12 @@
 		"oAP": "\/languages\/wilsons.pot",
 		"oF": 0
 		},
+	"\/page-about.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page-about.php",
+		"oF": 0
+		},
 	"\/page-contact.php": {
 		"ft": 8192,
 		"oA": 0,
