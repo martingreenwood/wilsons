@@ -21,7 +21,7 @@ $feature_img = wp_get_attachment_image_src( get_post_thumbnail_id( $pID ), 'full
 	<div class="row">
 		<div class="table">
 			<div class="cell middle">
-				<h1><?php the_field('custom_heading') ?></h1>
+				<h1><?php the_field('custom_heading', $pID) ?></h1>
 			</div>
 		</div>
 	</div>
