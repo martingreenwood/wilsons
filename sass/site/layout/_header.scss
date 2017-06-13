@@ -120,11 +120,11 @@
 			    	@include rem(width, 26px);
 			    	display: block;
     				text-align: center;
-	    			border: 2.5px solid $dark-gray;
+	    			border: 2.5px solid #000 ;
     				border-radius: 50%;
 
     				.fa {
-    					color: $dark-gray;
+    					color: #000;
     				}
 	    		}
 			}
@@ -133,7 +133,7 @@
 		p {
 			text-align: right;
 			text-transform: uppercase;
-			color: $dark-gray;
+			color: #000;
 			@include rem(font-size, 12px);
 		}
 	}

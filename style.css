@@ -998,14 +998,14 @@ a {
           width: 2.6rem;
           display: block;
           text-align: center;
-          border: 2.5px solid #808285;
+          border: 2.5px solid #000;
           border-radius: 50%; }
           #masthead #social ul li a .fa {
-            color: #808285; }
+            color: #000; }
     #masthead #social p {
       text-align: right;
       text-transform: uppercase;
-      color: #808285;
+      color: #000;
       font-size: 12px;
       font-size: 1.2rem; }
   #masthead #phone {
