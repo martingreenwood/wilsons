@@ -924,10 +924,10 @@ a {
       #masthead.scrolled {
         background: white; }
         #masthead.scrolled #social ul li a {
-          color: #080707 !important;
-          border-color: #080707 !important; }
+          color: #000 !important;
+          border-color: #000 !important; }
         #masthead.scrolled #social p {
-          color: #080707 !important; } }
+          color: #000 !important; } }
   #masthead .container {
     position: relative; }
   #masthead .site-branding {
