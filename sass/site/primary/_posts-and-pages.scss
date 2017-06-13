@@ -17,6 +17,15 @@
     	//background-color:  rgba(0,0,0,0.15);
     }
 
+    .table {
+    	@include media ($medium-screen-up) {
+    		padding-top: 53px;
+    	}
+    	@include media ($large-screen-up) {
+    		padding-top: 118px;
+    	}
+    }
+
     h1 {
     	max-width: 480px;
     	@include rem(font-size, 36px);

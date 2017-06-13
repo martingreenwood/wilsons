@@ -1163,6 +1163,12 @@ a {
   background-repeat: no-repeat; }
   #feature_img .container, #feature_img .row {
     height: 100%; }
+  @media screen and (min-width: 680px) {
+    #feature_img .table {
+      padding-top: 53px; } }
+  @media screen and (min-width: 1046px) {
+    #feature_img .table {
+      padding-top: 118px; } }
   #feature_img h1 {
     max-width: 480px;
     font-size: 36px;
